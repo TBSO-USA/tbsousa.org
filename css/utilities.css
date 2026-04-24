@@ -1,0 +1,352 @@
+/* ========================================
+   TBSO Utility Classes
+   ======================================== */
+
+/* ========== Text Alignment ========== */
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/* ========== Text Transform ========== */
+
+.text-uppercase {
+  text-transform: uppercase !important;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+/* ========== Font Weights ========== */
+
+.font-light {
+  font-weight: var(--font-weight-light) !important;
+}
+
+.font-regular {
+  font-weight: var(--font-weight-regular) !important;
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium) !important;
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold) !important;
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold) !important;
+}
+
+/* ========== Text Colors ========== */
+
+.text-saffron {
+  color: var(--color-saffron) !important;
+}
+
+.text-earth-brown {
+  color: var(--color-earth-brown) !important;
+}
+
+.text-clay {
+  color: var(--color-clay) !important;
+}
+
+.text-white {
+  color: var(--color-white) !important;
+}
+
+/* ========== Margins ========== */
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mt-10 {
+  margin-top: var(--spacing-10) !important;
+}
+
+.mt-20 {
+  margin-top: var(--spacing-20) !important;
+}
+
+.mt-30 {
+  margin-top: var(--spacing-30) !important;
+}
+
+.mt-40 {
+  margin-top: var(--spacing-40) !important;
+}
+
+.mt-50 {
+  margin-top: var(--spacing-50) !important;
+}
+
+.mt-60 {
+  margin-top: var(--spacing-60) !important;
+}
+
+.mb-10 {
+  margin-bottom: var(--spacing-10) !important;
+}
+
+.mb-20 {
+  margin-bottom: var(--spacing-20) !important;
+}
+
+.mb-30 {
+  margin-bottom: var(--spacing-30) !important;
+}
+
+.mb-40 {
+  margin-bottom: var(--spacing-40) !important;
+}
+
+.mb-50 {
+  margin-bottom: var(--spacing-50) !important;
+}
+
+.mb-60 {
+  margin-bottom: var(--spacing-60) !important;
+}
+
+.my-40 {
+  margin-top: var(--spacing-40) !important;
+  margin-bottom: var(--spacing-40) !important;
+}
+
+.my-60 {
+  margin-top: var(--spacing-60) !important;
+  margin-bottom: var(--spacing-60) !important;
+}
+
+/* ========== Padding ========== */
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pt-20 {
+  padding-top: var(--spacing-20) !important;
+}
+
+.pt-40 {
+  padding-top: var(--spacing-40) !important;
+}
+
+.pt-60 {
+  padding-top: var(--spacing-60) !important;
+}
+
+.pb-20 {
+  padding-bottom: var(--spacing-20) !important;
+}
+
+.pb-40 {
+  padding-bottom: var(--spacing-40) !important;
+}
+
+.pb-60 {
+  padding-bottom: var(--spacing-60) !important;
+}
+
+.py-40 {
+  padding-top: var(--spacing-40) !important;
+  padding-bottom: var(--spacing-40) !important;
+}
+
+.py-60 {
+  padding-top: var(--spacing-60) !important;
+  padding-bottom: var(--spacing-60) !important;
+}
+
+/* ========== Display ========== */
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* ========== Flexbox Utilities ========== */
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.align-end {
+  align-items: flex-end !important;
+}
+
+.gap-20 {
+  gap: var(--spacing-20) !important;
+}
+
+.gap-30 {
+  gap: var(--spacing-30) !important;
+}
+
+.gap-40 {
+  gap: var(--spacing-40) !important;
+}
+
+/* ========== Width ========== */
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.max-w-content {
+  max-width: var(--content-width) !important;
+}
+
+.max-w-wide {
+  max-width: var(--wide-width) !important;
+}
+
+/* ========== Responsive Visibility ========== */
+
+.hide-mobile {
+  display: none !important;
+}
+
+@media (min-width: 641px) {
+  .hide-mobile {
+    display: block !important;
+  }
+
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hide-tablet {
+    display: block !important;
+  }
+
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  display: block !important;
+}
+
+@media (min-width: 641px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* ========== Background Colors ========== */
+
+.bg-cream {
+  background-color: var(--color-warm-cream) !important;
+}
+
+.bg-ivory {
+  background-color: var(--color-ivory) !important;
+}
+
+.bg-earth {
+  background-color: var(--color-earth-brown) !important;
+}
+
+.bg-white {
+  background-color: var(--color-white) !important;
+}
+
+/* ========== Border Utilities ========== */
+
+.border-top {
+  border-top: var(--border-width) solid var(--color-ivory) !important;
+}
+
+.border-bottom {
+  border-bottom: var(--border-width) solid var(--color-ivory) !important;
+}
+
+.border-radius {
+  border-radius: var(--border-radius) !important;
+}
+
+/* ========== Shadow Utilities ========== */
+
+.shadow-small {
+  box-shadow: var(--shadow-small) !important;
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-medium) !important;
+}
+
+.shadow-large {
+  box-shadow: var(--shadow-large) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
