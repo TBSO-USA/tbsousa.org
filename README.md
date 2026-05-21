@@ -60,28 +60,37 @@ tbso/
 
 ## 🚀 Deployment
 
-### GitHub Pages Setup
+### Current Hosting Setup
+
+**Platform**: Vercel (Hobby Plan - Free)
+- **Repository**: https://github.com/michelleaint/tbsousa
+- **Branch**: `main`
+- **Plan**: [Hobby Plan](https://vercel.com/docs/plans/hobby) (free tier)
+- **Status**: No need to upgrade to Pro Plan yet
+
+**Domain Management**:
+- **Domain Registrar**: Bluehost (http://bluehost.com)
+- **DNS Configuration**: DNS entries updated in Bluehost to point to Vercel
+- **Previous Host**: Bluehost (migrated to Vercel for better performance)
+
+### How Deployment Works
 
 1. **Push to main branch**:
    ```bash
    git add .
-   git commit -m "Add TBSO website"
+   git commit -m "Update content"
    git push origin main
    ```
 
-2. **Configure GitHub Pages**:
-   - Go to repository Settings → Pages
-   - Source: Deploy from branch `main` / `(root)`
-   - Save and wait 2-3 minutes
+2. **Automatic Deployment**:
+   - Vercel automatically detects changes to `main` branch
+   - Builds and deploys within seconds
+   - No manual configuration needed
 
-3. **Live URL**: `https://michelleaint.github.io/`
-
-### Custom Domain (Optional)
-
-To use custom domain like `tbso.org`:
-1. Add `CNAME` file with domain name
-2. Configure DNS A records to GitHub IPs
-3. Update GitHub Pages settings
+3. **Vercel Dashboard**:
+   - View deployments: https://vercel.com/dashboard
+   - Monitor build logs and preview deployments
+   - Configure custom domain settings
 
 ## 📝 Content Updates
 
