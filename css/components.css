@@ -539,3 +539,21 @@ blockquote cite {
 blockquote cite::before {
   content: '— ';
 }
+
+/* ========== Navigation Active State ========== */
+
+.menu a[aria-current="page"] {
+  color: var(--color-saffron);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+}
+
+.menu a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-saffron);
+}
