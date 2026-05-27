@@ -350,3 +350,21 @@
 .shadow-none {
   box-shadow: none !important;
 }
+
+/* ========== Animations ========== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-fade-in {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}

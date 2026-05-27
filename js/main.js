@@ -231,6 +231,82 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ========================================
+  // Carousel Functionality
+  // ========================================
+
+  const carousel = document.getElementById('eventCarousel');
+
+  if (carousel) {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = carousel.querySelector('.carousel-button.prev');
+    const nextButton = carousel.querySelector('.carousel-button.next');
+    const dotsNav = carousel.querySelector('.carousel-nav');
+    const dots = dotsNav ? Array.from(dotsNav.querySelectorAll('.carousel-dot')) : [];
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel(index) {
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      if (dots.length > 0) {
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel(currentIndex);
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', nextSlide);
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener('click', prevSlide);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel(currentIndex);
+      });
+    });
+
+    // Auto-advance carousel every 5 seconds
+    let autoplayInterval = setInterval(nextSlide, 5000);
+
+    // Pause autoplay on hover
+    carousel.addEventListener('mouseenter', () => {
+      clearInterval(autoplayInterval);
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+      autoplayInterval = setInterval(nextSlide, 5000);
+    });
+
+    // Keyboard navigation
+    if (prevButton || nextButton) {
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === 'ArrowRight') {
+          nextSlide();
+        }
+      });
+    }
+  }
+
+  // ========================================
   // Console Message
   // ========================================
 
