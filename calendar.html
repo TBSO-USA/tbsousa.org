@@ -194,6 +194,7 @@
         </div>
 
         <div class="text-center mt-60 no-print">
+          <p style="color: var(--color-clay); margin-bottom: var(--spacing-30); font-style: italic;">💡 Click any calendar image to view it full-screen</p>
           <div class="d-flex justify-center gap-30" style="flex-wrap: wrap;">
             <a href="events.html" class="btn">View Event Details</a>
             <button onclick="window.print()" class="btn btn-secondary">🖨️ Print Calendar</button>
@@ -203,6 +204,14 @@
     </section>
 
   </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Calendar image viewer">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <img id="lightbox-img" class="lightbox-image" src="" alt="">
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">

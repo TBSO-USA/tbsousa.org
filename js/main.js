@@ -307,6 +307,50 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ========================================
+  // Image Lightbox for Calendar
+  // ========================================
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const calendarImages = document.querySelectorAll('.calendar-month img');
+
+  if (lightbox && lightboxImg && calendarImages.length > 0) {
+    calendarImages.forEach(img => {
+      img.addEventListener('click', function() {
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on click of close button
+    const closeButton = lightbox.querySelector('.lightbox-close');
+    if (closeButton) {
+      closeButton.addEventListener('click', closeLightbox);
+    }
+
+    // Close on click outside image
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  // ========================================
   // Console Message
   // ========================================
 
