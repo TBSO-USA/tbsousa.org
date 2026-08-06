@@ -234,10 +234,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Carousel Functionality
   // ========================================
 
-  const carousel = document.getElementById('eventCarousel');
+  const carousels = document.querySelectorAll('.carousel');
 
-  if (carousel) {
+  carousels.forEach(function(carousel) {
     const track = carousel.querySelector('.carousel-track');
+    if (!track) return;
+
     const slides = Array.from(track.children);
     const prevButton = carousel.querySelector('.carousel-button.prev');
     const nextButton = carousel.querySelector('.carousel-button.next');
@@ -282,10 +284,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    // Auto-advance carousel every 5 seconds
     let autoplayInterval = setInterval(nextSlide, 5000);
 
-    // Pause autoplay on hover
     carousel.addEventListener('mouseenter', () => {
       clearInterval(autoplayInterval);
     });
@@ -294,17 +294,14 @@ document.addEventListener('DOMContentLoaded', function() {
       autoplayInterval = setInterval(nextSlide, 5000);
     });
 
-    // Keyboard navigation
-    if (prevButton || nextButton) {
-      carousel.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-          prevSlide();
-        } else if (e.key === 'ArrowRight') {
-          nextSlide();
-        }
-      });
-    }
-  }
+    carousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+    });
+  });
 
   // ========================================
   // Image Lightbox for Calendar
