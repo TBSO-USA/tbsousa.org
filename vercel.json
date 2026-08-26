@@ -4,7 +4,7 @@
   "redirects": [
     {
       "source": "/mailman/(.*)",
-      "destination": "https://hostmonster.com",
+      "destination": "https://hostmonster.com$1",
       "permanent": true
     }
   ]
