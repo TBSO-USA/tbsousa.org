@@ -3,8 +3,8 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/mailman/:path*",
-      "destination": "https://hostmonster.com*",
+      "source": "/mailman/(.*)",
+      "destination": "https://hostmonster.com",
       "permanent": true
     }
   ]
