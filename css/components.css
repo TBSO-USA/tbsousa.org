@@ -773,3 +773,126 @@ blockquote cite::before {
     height: 40px;
   }
 }
+
+/* ========== Projects ========== */
+
+.project-eyebrow {
+  color: var(--color-monk-robe);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-30);
+}
+
+.project-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-earth-brown);
+  margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+  .project-title {
+    white-space: nowrap;
+  }
+}
+
+.project-pano {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-pano img {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 32vw, 520px);
+  object-fit: cover;
+}
+
+.project-text {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 860px;
+  margin: 0 auto var(--spacing-40);
+}
+
+.project-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  color: var(--color-earth-brown);
+  text-align: center;
+  margin-top: var(--spacing-60);
+  margin-bottom: var(--spacing-10);
+}
+
+.project-caption {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-clay);
+  margin-bottom: var(--spacing-40);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-20);
+}
+
+@media (min-width: 641px) {
+  .project-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-gallery--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.project-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-medium);
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  background: var(--color-earth-brown);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-large);
+}
+
+.project-group-photo {
+  max-width: 520px;
+  margin: var(--spacing-50) auto 0;
+  text-align: center;
+}
+
+.project-group-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-large);
+}
+
+.project-group-photo figcaption {
+  margin-top: var(--spacing-20);
+  font-style: italic;
+  color: var(--color-clay);
+}
+

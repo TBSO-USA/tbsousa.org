@@ -304,12 +304,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ========================================
-  // Image Lightbox for Calendar
+  // Image Lightbox for Calendar & Project Galleries
   // ========================================
 
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-  const calendarImages = document.querySelectorAll('.calendar-month img');
+  const calendarImages = document.querySelectorAll('.calendar-month img, .project-gallery img');
 
   if (lightbox && lightboxImg && calendarImages.length > 0) {
     calendarImages.forEach(img => {
